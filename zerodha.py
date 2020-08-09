@@ -1,7 +1,9 @@
-"""Example importer for example broker Zerodha.
+"""Importer for leading Indian Stock broker Zerodha. This can be used to import transactions from Tradebook provided by the broker.
+This is entirely based on the Example importer utrade_csv.py written for example broker UTrade by Beancount author Martin Blais.    
 """
-__copyright__ = "Copyright (C) 2016  Martin Blais"
-__license__ = "GNU GPLv2"
+__copyright__ = "Copyright (C) 2020  Prabu Anand K"
+__license__ = "GNU GPLv3"
+__Version__ = "0.1"
 
 import csv
 import datetime
@@ -21,7 +23,7 @@ from beancount.ingest import importer
 
 
 class ZerodhaImporter(importer.ImporterProtocol):
-    """An importer for Zerodha CSV files (an example investment bank)."""
+    """An importer for Zerodha CSV files (a leading Indian stock broker)."""
 
     def __init__(self, currency,
                  account_root,
@@ -53,7 +55,6 @@ class ZerodhaImporter(importer.ImporterProtocol):
                 meta = data.new_metadata(file.name, index)
                 date = parse(row['trade_date']).date()
                 rtype = row['trade_type']
-                #orderid = row['order_id']
                 link = "{0[order_id]}".format(row)
                 desc = "{0[trade_type]} {0[tradingsymbol]} with TradeRef {0[trade_id]}".format(row)
                 units = amount.Amount(D(row['amount']), self.currency)
@@ -83,10 +84,7 @@ class ZerodhaImporter(importer.ImporterProtocol):
                             ])
 
                     elif rtype == 'sell':
-                        # Extract the lot. In practice this information not be there
-                        # and you will have to identify the lots manually by editing
-                        # the resulting output. You can leave the cost.number slot
-                        # set to None if you like.
+                        # here the profit or loss goes to PnL account as configured in config.py
                         cost_number = None
                         cost = position.Cost(cost_number, self.currency, None, None)
                         price = amount.Amount(rate, self.currency)
