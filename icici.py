@@ -19,7 +19,7 @@ class IciciBankImporter(importer.ImporterProtocol):
         self.account = account
         self.lastfour = lastfour
     def identify(self, f):
-        return re.match('Icici{}.*\.CSV'.format(self.lastfour), os.path.basename(f.name))
+        return re.match('icici{}.*\.csv'.format(self.lastfour), os.path.basename(f.name))
     
     def extract(self, f):
         entries = []
