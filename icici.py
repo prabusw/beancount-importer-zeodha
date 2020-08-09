@@ -1,3 +1,11 @@
+"""Importer for ICICI Bank, India.
+This script is heavily based on the script importers-chase.py  by Matt Terwilliger. 
+Original script can be found here https://gist.github.com/mterwill/7fdcc573dc1aa158648aacd4e33786e8
+"""
+__copyright__ = "Copyright (C) 2020  Prabu Anand K"
+__license__ = "GNU GPLv3"
+__Version__ = "0.1"
+
 from beancount.core.number import D
 from beancount.ingest import importer
 from beancount.core import account
