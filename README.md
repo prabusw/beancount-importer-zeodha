@@ -2,7 +2,9 @@
 
 Note: Please click on Raw option on the righthand corner to view this README in a better format.
 
-This is an importer for csv formatted tradebook from Indias leading stock broker Zerodha. Every decent broker in India, gives similar file. So this can work almost for everyone. This importer is based almost entirely on the sample csv importer provided by the beancount author Martin Blais.
+This is an importer for csv formatted tradebook from Indias leading stock broker Zerodha. Every decent broker in India, gives similar file. 
+So this can work almost for every broker who provides tradebook in csv format. 
+This importer zerodha.py is based almost entirely on the sample csv importer "utrade_csv.py" provided by the Beancount author Martin Blais.
 
 The default csv formatted tradebook from Zerodha has the following fields: 
 trade_date	tradingsymbol	exchange	segment	trade_type	quantity	price	order_id	trade_id	order_execution_time
@@ -16,6 +18,7 @@ formula for amount(column k) appears as =F2*G2, where columns F and G are quanti
 forumla for fees(column L) appears as=round(k2*0.001,2).
 
 With the above two changes done, make sure the csv file is named as zerodhayyyymmdd.csv format. For example, zerodha20200401.csv is a valid filename. 
+
 This csv must be placed in Downloads folder at the root of beancount.
 
 The script zerodha.py must be placed in the following folder importers\zerodha at the root of beancount. 
@@ -24,7 +27,9 @@ Refer to the directory structure presented below as recommened in Beancount docu
 
 The configuration file is named as config.py and this can be in the same folder as the main beancount file i,e here my.beancount.
 
-The script icici.py can be placed in the folder importers\icici and can be used, if you have account with ICICI Bank.
+If you have account with ICICI Bank, the importer script icici.py can be used. It needs to be placed in the folder importers\icici. For this import script too, 
+the appropriate data file icici3722.csv must be placed in Downloads folder. 
+This script icici.py is heavily based on the script importers-chase.py hosted here  https://gist.github.com/mterwill/7fdcc573dc1aa158648aacd4e33786e8
 
 The command(linux) to extract data in a format sutiable for beancount is 
 
@@ -45,7 +50,7 @@ $bean-extract config.py Downloads
 │   │   
 │   └── Liabilities
 ├── Downloads
-│   ├── Icici3722.CSV
+│   ├── icici3722.csv
 │   ├── zerodha20170401.csv
 │   
 ├── importers
