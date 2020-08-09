@@ -1,4 +1,7 @@
 # beancount-importer-zeodha
+
+Note: Please click on Raw option on the righthand corner to view this README in a better format.
+
 This is an importer for csv formatted tradebook from Indias leading stock broker Zerodha. Every decent broker in India, gives similar file. So this can work almost for everyone. This importer is based almost entirely on the sample csv importer provided by the beancount author Martin Blais.
 The default csv formatted tradebook from Zerodha has the following fields: 
 trade_date	tradingsymbol	exchange	segment	trade_type	quantity	price	order_id	trade_id	order_execution_time
@@ -57,7 +60,7 @@ The output of above command is given below
 2017-04-13 * "buy INFY with TradeRef 26200755" ^1100000000419606
   Assets:IN:Investment:ILFSSS:INFY      3 INFY {941.2 INR}
   Expenses:Financial:Taxes:Zerodha   2.82 INR             
-  Assets:IN:Investment:Zerodha:Cash                       
+  Assets:IN:Investment:Zerodha:Cash             
 
 
 
