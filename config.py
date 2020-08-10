@@ -1,3 +1,11 @@
+"""Import configuration file for Zerodha, an Indian stock broker and  ICICI Bank, a bank in India .
+This script is heavily based on the script config.py  by Matt Terwilliger. 
+Original script can be found here https://gist.github.com/mterwill/7fdcc573dc1aa158648aacd4e33786e8
+"""
+__copyright__ = "Copyright (C) 2020  Prabu Anand K"
+__license__ = "GNU GPLv3"
+__Version__ = "0.1"
+
 import os, sys
 
 # beancount doesn't run from this directory
@@ -13,7 +21,7 @@ CONFIG = [
     icici.IciciBankImporter('Assets:IN:ICICIBank:Savings', '3722'),
 
     zerodha.ZerodhaImporter("INR",
-                        "Assets:IN:Investment:ILFSSS",
+                        "Assets:IN:Investment:Zerodha",
                         "Assets:IN:Investment:Zerodha:Cash",
                         "Income:IN:Investment:Dividend",
                         "Income:IN:Investment:PnL",
