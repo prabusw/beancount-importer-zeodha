@@ -1,8 +1,10 @@
 # beancount-importer-zeodha
 
 
+Importer for Zerodha
+
 This is an importer for csv formatted tradebook from Indian stock broker Zerodha. Every decent broker in India, gives similar tradebook. 
-So this importer can work almost for every broker who provides tradebook in csv format.
+So this importer can work almost for every broker who provides tradebook in csv format. 
 
 This importer zerodha.py is based almost entirely on the sample csv importer "utrade_csv.py" provided by the Beancount author Martin Blais.
 
@@ -27,6 +29,9 @@ Refer to the folder structure presented at the bottom of this document with the 
 is also available as a screengrab here https://github.com/prabusw/beancount-importer-zerodha/blob/master/folderstructure.png.
 
 The configuration file is named as config.py and this can be in the same folder as the main beancount file i,e here my.beancount.
+
+Note: There is another importer for Zerodha here at https://github.com/swapi/beancount-utils. It can import xml formatted Digital Contract Note available 
+from Zerodha website.
 
 Importer for ICICIBank
 
@@ -129,6 +134,3 @@ Example folder structure:
 │       ├── __init__.py
 │       └── zerodha.py
 ├── my.beancount
-
-
-
