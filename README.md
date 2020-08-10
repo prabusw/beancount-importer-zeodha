@@ -68,7 +68,8 @@ Depending on the number of matching csv files available in Downloads folder, the
 
 $bean-extract config.py Downloads > mytxn.txt
 
-A sample two line input for zerodha csv follows:
+
+Sample two line input for zerodha.csv follows:
 trade_date	tradingsymbol	exchange	segment	trade_type	quantity	price	order_id	trade_id	order_execution_time	amount	fees
 2017-04-13	LIQUIDBEES	NSE	EQ	sell	30	999.99	1200000000772831	59283787	2017-04-13T09:54:26	29999.7	30
 2017-04-13	INFY	NSE	EQ	buy	3	941.2	1100000000419606	26200755	2017-04-13T12:37:32	2823.6	2.82
@@ -76,17 +77,17 @@ trade_date	tradingsymbol	exchange	segment	trade_type	quantity	price	order_id	tra
 The output of above command is given below
                                
 2017-04-13 * "sell LIQUIDBEES with TradeRef 59283787" ^1200000000772831
-  Assets:IN:Investment:ILFSSS:LIQUIDBEES      -30 LIQUIDBEES {} @ 999.99 INR
-  Expenses:Financial:Taxes:Zerodha             30 INR                       
-  Assets:IN:Investment:Zerodha:Cash       29969.7 INR                       
-  Income:IN:Investment:PnL:LIQUIDBEES                                       
+  Assets:IN:Investment:Zerodha:LIQUIDBEES      -30 LIQUIDBEES {} @ 999.99 INR
+  Expenses:Financial:Taxes:Zerodha              30 INR                       
+  Assets:IN:Investment:Zerodha:Cash        29969.7 INR                       
+  Income:IN:Investment:PnL:LIQUIDBEES                                        
 
 2017-04-13 * "buy INFY with TradeRef 26200755" ^1100000000419606
-  Assets:IN:Investment:ILFSSS:INFY      3 INFY {941.2 INR}
+  Assets:IN:Investment:Zerodha:INFY     3 INFY {941.2 INR}
   Expenses:Financial:Taxes:Zerodha   2.82 INR             
-  Assets:IN:Investment:Zerodha:Cash             
+  Assets:IN:Investment:Zerodha:Cash          
 
-A sample two line input for ICICI csv follows:
+Sample two line input for icici3722.csv follows:
 Posting Date	Description	Amount
 2019-04-01	MPS/SRI AUROBIN/201904011758/012476/	-249.22
 2019-04-04	MCD REF SRI AUROBINDO UDYO DT 190401	1.87
