@@ -1,5 +1,6 @@
-"""Importer for leading Indian Stock broker Zerodha. This can be used to import transactions from Tradebook provided by the broker.
-This is entirely based on the Example importer utrade_csv.py written for example broker UTrade by Beancount author Martin Blais.    
+"""Importer for Indian Stock broker Zerodha. 
+This script is entirely based on the importer script utrade_csv.py written by Beancount author Martin Blais. He provided this as an example importer script.
+This script can be used to import transactions from Tradebook provided by your broker.
 """
 __copyright__ = "Copyright (C) 2020  Prabu Anand K"
 __license__ = "GNU GPLv3"
@@ -23,7 +24,7 @@ from beancount.ingest import importer
 
 
 class ZerodhaImporter(importer.ImporterProtocol):
-    """An importer for Zerodha CSV files (a leading Indian stock broker)."""
+    """An importer for Zerodha CSV files (an Indian stock broker)."""
 
     def __init__(self, currency,
                  account_root,
