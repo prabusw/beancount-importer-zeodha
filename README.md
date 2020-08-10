@@ -25,8 +25,7 @@ This csv must be placed in Downloads folder at the root of beancount.
 
 The script zerodha.py must be placed in the following folder importers\zerodha at the root of beancount. 
 
-Refer to the folder structure presented at the bottom of this document with the above scripts in their respective folders. This structure 
-is also available as a screengrab here https://github.com/prabusw/beancount-importer-zerodha/blob/master/folderstructure.png.
+Refer to the folder structure presented at the bottom of this document with the above scripts in their respective folders. 
 
 The configuration file is named as config.py and this can be in the same folder as the main beancount file i,e here my.beancount.
 
@@ -92,6 +91,11 @@ The output of above command is given below
   Expenses:Financial:Taxes:Zerodha   2.82 INR             
   Assets:IN:Investment:Zerodha:Cash          
 
+This is how the original statement from ICICIBank looks like:
+S No.	Value Date	Transaction Date	Cheque Number	Transaction Remarks	Withdrawal Amount (INR)	Deposit Amount (INR)	Balance (INR)
+1	01/04/2019	02/04/2019	 	MPS/SRI AUROBIN/201904011758/012476/	249.22	 XX,620.60
+2	04/04/2019	04/04/2019	 	MCD REF SRI AUROBINDO UDYO DT 190401	 	1.87	XX,622.47
+
 Sample two line input for icici3722.csv follows:
 Posting Date	Description	Amount
 2019-04-01	MPS/SRI AUROBIN/201904011758/012476/	-249.22
@@ -107,6 +111,8 @@ The output of above command is given below
 
 
 Example folder structure:
+
+If the below folder structure is not legible, click here https://github.com/prabusw/beancount-importer-zerodha/blob/master/folderstructure.png
 
 ├── config.py
 ├── documents
