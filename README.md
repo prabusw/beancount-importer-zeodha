@@ -1,6 +1,5 @@
 # beancount-importer-zeodha
 
-Note: Please click on Raw option on the righthand corner to view this README in a better format.
 
 This is an importer for csv formatted tradebook from Indias leading stock broker Zerodha. Every decent broker in India, gives similar file. 
 So this can work almost for every broker who provides tradebook in csv format. 
@@ -23,7 +22,8 @@ This csv must be placed in Downloads folder at the root of beancount.
 
 The script zerodha.py must be placed in the following folder importers\zerodha at the root of beancount. 
 
-Refer to the directory structure presented below as recommened in Beancount documentation with the above scripts in their respective folders.
+Refer to the directory structure presented below as recommened in Beancount documentation with the above scripts in their respective folders. This structure 
+is also available as a screengrab here https://github.com/prabusw/beancount-importer-zerodha/blob/master/folderstructure.png.
 
 The configuration file is named as config.py and this can be in the same folder as the main beancount file i,e here my.beancount.
 
