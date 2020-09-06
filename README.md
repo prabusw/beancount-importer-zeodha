@@ -96,11 +96,11 @@ The output of above command is given below
   Assets:IN:Investment:Zerodha:Cash          
 </pre>
 
-This is how the original statement from ICICIBank renamed as icici3722.csv looks like:
+This is how the original statement from ICICIBank appears in icici3722.csv after change in date format to YYYY-MM-DD:
 <pre>
-S No.	Value Date	Transaction Date	Cheque Number	Transaction Remarks	                  Withdrawal Amount (INR)	Deposit Amount (INR)	Balance (INR)
-1	    01/04/2019	  02/04/2019	                	MPS/SRI AUROBIN/201904011758/012476/	249.22	                                        XX,620.60
-2	    04/04/2019	  04/04/2019	 	                MCD REF SRI AUROBINDO UDYO DT 190401	 	                         1.87	                XX,622.47
+S No.	 Value Date	 Transaction Date	Cheque Number	Transaction Remarks	                  Withdrawal Amount (INR)	Deposit Amount (INR)	Balance (INR)
+1	    2019-04-01	  2019-04-02	                	MPS/SRI AUROBIN/201904011758/012476/	  249.22	                                        XX,620.60
+2	    2019-04-01	  2019-04-01	 	                MCD REF SRI AUROBINDO UDYO DT 190401	 	                         1.87	                  XX,622.47
 </pre>
 
 The output of above command is given below
