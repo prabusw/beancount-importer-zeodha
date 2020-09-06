@@ -136,11 +136,24 @@ Example folder structure:
 │   ├── zerodha20170401.csv
 │   
 ├── importers
+│   ├── etrade
+│   │   ├── etrade.py
+│   │   ├── __init__.py
+│   │       
 │   ├── icici
 │   │   ├── icici.py
+│   │   |__init__.py
+│   │   
+│   ├── iob
 │   │   ├── __init__.py
+│   │   ├── iob.py
+│   ├── sbi
+│   │   ├── __init__.py│   │   
+│   │   └── sbi.py
 │   └── zerodha
 │       ├── __init__.py
 │       └── zerodha.py
-├── my.beancount
+|
+|
+|─ my.beancount
 </pre>
