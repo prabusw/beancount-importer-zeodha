@@ -74,13 +74,15 @@ Depending on the number of matching csv files available in Downloads folder, the
 
 $bean-extract config.py Downloads > mytxn.txt
 
-
+<pre>
 Sample two line input for zerodha.csv follows:
 trade_date	tradingsymbol	exchange	segment	trade_type	quantity	price	order_id	trade_id	order_execution_time	amount	fees
 2017-04-13	LIQUIDBEES	NSE	EQ	sell	30	999.99	1200000000772831	59283787	2017-04-13T09:54:26	29999.7	30
 2017-04-13	INFY	NSE	EQ	buy	3	941.2	1100000000419606	26200755	2017-04-13T12:37:32	2823.6	2.82
+</pre>
 
 The output of above command is given below
+<pre>
                                
 2017-04-13 * "sell LIQUIDBEES with TradeRef 59283787" ^1200000000772831
   Assets:IN:Investment:Zerodha:LIQUIDBEES      -30 LIQUIDBEES {} @ 999.99 INR
@@ -92,24 +94,27 @@ The output of above command is given below
   Assets:IN:Investment:Zerodha:INFY     3 INFY {941.2 INR}
   Expenses:Financial:Taxes:Zerodha   2.82 INR             
   Assets:IN:Investment:Zerodha:Cash          
+</pre>
 
 This is how the original statement from ICICIBank renamed as icici3722.csv looks like:
+<pre>
 S No.	Value Date	Transaction Date	Cheque Number	Transaction Remarks	Withdrawal Amount (INR)	Deposit Amount (INR)	Balance (INR)
 1	01/04/2019	02/04/2019	 	MPS/SRI AUROBIN/201904011758/012476/	249.22	 XX,620.60
 2	04/04/2019	04/04/2019	 	MCD REF SRI AUROBINDO UDYO DT 190401	 	1.87	XX,622.47
+</pre>
 
 The output of above command is given below
-
+<pre>
 2019-04-01 * "MPS/Sri Aurobin/201904011758/012476/" ""
   Assets:IN:ICICIBank:Savings  -249.22 INR
 
 2019-04-04 * "MCD Ref Sri Aurobindo Udyo Dt 190401" ""
   Assets:IN:ICICIBank:Savings  1.87 INR
+</pre>
 
 
 Example folder structure:
 
-If the below folder structure is not legible, click here https://github.com/prabusw/beancount-importer-zerodha/blob/master/folderstructure.png
 <pre>
 ├── config.py
 ├── documents
