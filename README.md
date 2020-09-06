@@ -1,4 +1,34 @@
-# beancount-importer-zeodha
+# beancount-importers-india
+
+Importer for Banks
+
+Importer for ICICIBank
+
+If you have account with ICICI Bank, the importer script icici.py can be used. This script is heavily based on the script 
+importers-chase.py hosted here  https://gist.github.com/mterwill/7fdcc573dc1aa158648aacd4e33786e8
+
+The default transaction file downloaded in csv format from ICICI Bank website will work as it is with few manual steps as detailed below. 
+
+How to prepare icicibank statement in xls for import as csv
+
+* remove logo and top few rows until the header row
+* Change the date format as per yyyy-mm-dd. Then save it as csv in the and the file must be named as icicixxxx.csv,  where xxxx must match the entry in config.py file. 
+* For eg. icici3722.csv is a valid name, for the config.py given here. This csv file must be placed in Downloads folder.
+* The script icici.py needs to be placed in the folder importers\icici.
+
+Importer for SBI
+
+If you have account with SBI Bank, the importer script sbi.py can be used. This script is heavily based on the script 
+importers-chase.py hosted here  https://gist.github.com/mterwill/7fdcc573dc1aa158648aacd4e33786e8
+
+The default transaction file downloaded in csv format from SBI Bank website will work as it is with few manual steps as detailed below. 
+
+How to prepare SBI Bank statement for import
+
+* remove logo and top few rows until the header row
+* Change the date format as per yyyy-mm-dd. Then save it as csv in the and the file must be named as sbixxxx.csv,  where xxxx must match the entry in config.py file. 
+* For eg. sbi3722.csv is a valid name, for the config.py given here. This csv file must be placed in Downloads folder.
+* The script sbi.py needs to be placed in the folder importers\sbi.
 
 
 Importer for Zerodha
@@ -32,19 +62,7 @@ The configuration file is named as config.py and this can be in the same folder 
 Note: There is another importer for Zerodha here at https://github.com/swapi/beancount-utils. It can import xml formatted Digital Contract Note available 
 from Zerodha website.
 
-Importer for ICICIBank
 
-If you have account with ICICI Bank, the importer script icici.py can be used. This script icici.py is heavily based on the script 
-importers-chase.py hosted here  https://gist.github.com/mterwill/7fdcc573dc1aa158648aacd4e33786e8
-
-The default transaction file downloaded in csv format from ICICI Bank website will work as it is with very few manual steps as detailed below. 
-
-How to prepare icicibank statement in xls for import as csv
-
-* remove logo and top few rows until the header row
-* Change the date format as per yyyy-mm-dd. Then save it as csv in the and the file must be named as icicixxxx.csv,  where xxxx must match the entry in config.py file. 
-* For eg. icici3722.csv is a valid name, for the config.py given here. This csv file must be placed in Downloads folder.
-* The script icici.py needs to be placed in the folder importers\icici.
 
 How to Extract data or import data from csv files 
 
@@ -92,7 +110,7 @@ The output of above command is given below
 Example folder structure:
 
 If the below folder structure is not legible, click here https://github.com/prabusw/beancount-importer-zerodha/blob/master/folderstructure.png
-
+<pre>
 ├── config.py
 ├── documents
 │   ├── Assets
@@ -119,3 +137,4 @@ If the below folder structure is not legible, click here https://github.com/prab
 │       ├── __init__.py
 │       └── zerodha.py
 ├── my.beancount
+</pre>
