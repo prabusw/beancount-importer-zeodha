@@ -1,6 +1,6 @@
 # beancount-importers-india
 
-Importer for Banks
+Importer for Banks in India. The code for SBI and ICICI has already been tested and found working for the following banks in India KVB and IOB.
 
 Importer for ICICIBank
 
@@ -30,6 +30,7 @@ How to prepare SBI Bank statement for import
 * For eg. sbi3722.csv is a valid name, for the config.py given here. This csv file must be placed in Downloads folder.
 * The script sbi.py needs to be placed in the folder importers\sbi.
 
+Note: The main difference in SBI and ICICI Bank importer code is in the representation of unused value. In ICICI it is given as Zero i.e "0", in SBI it is empty.
 
 Importer for Zerodha
 
@@ -99,8 +100,8 @@ The output of above command is given below
 This is how the original statement from ICICIBank appears in icici3722.csv after change in date format to YYYY-MM-DD:
 <pre>
 S No.	 Value Date	 Transaction Date	Cheque Number	Transaction Remarks	                  Withdrawal Amount (INR)	Deposit Amount (INR)	Balance (INR)
-1	    2019-04-01	  2019-04-02	                	MPS/SRI AUROBIN/201904011758/012476/	  249.22	                                        XX,620.60
-2	    2019-04-01	  2019-04-01	 	                MCD REF SRI AUROBINDO UDYO DT 190401	 	                         1.87	                  XX,622.47
+1	    2019-04-01	  2019-04-02	                	MPS/SRI AUROBIN/201904011758/012476/	  249.22	                   0                     XX,620.60
+2	    2019-04-01	  2019-04-01	 	                MCD REF SRI AUROBINDO UDYO DT 190401	 	  0                       1.87	                 XX,622.47
 </pre>
 
 The output of above command is given below
