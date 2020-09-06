@@ -1,6 +1,6 @@
 # beancount-importers-india
 
-Beancount importer for Banks in India. The code for SBI and ICICI has already been tested and found working for the following banks in India KVB and IOB. More information about beancount can be found here http://furius.ca/beancount/
+Beancount importer for Banks in India. The code for SBI and ICICI has already been tested and found working for the following banks in India KVB and IOB. More information about Beancount accounting package can be found here http://furius.ca/beancount/
 
 Importer for ICICIBank
 
