@@ -37,30 +37,14 @@ Importer for ICICIBank
 If you have account with ICICI Bank, the importer script icici.py can be used. This script icici.py is heavily based on the script 
 importers-chase.py hosted here  https://gist.github.com/mterwill/7fdcc573dc1aa158648aacd4e33786e8
 
-The default transaction file downloaded in csv format from ICICI Bank website does not work as of now. Please follow the below steps:
+The default transaction file downloaded in csv format from ICICI Bank website will work as it is with very few manual steps as detailed below. 
 
 How to prepare icicibank statement in xls for import as csv
 
-* remove all sheets except original sheet with transaction data in it.
-* remove logo
-* removel left most column(empty)
-* remove top few rows until the header row
-* delete "S No.", "Transaction Date", "Cheque Number", and "Balance" columns
-* make all withdrawl column entries as negative numbers by multiplying by (-1) into a new "tempAmount" column.
-* use data autofilter to create filter on "Deposit Amount" for non-zero. Copy and paste the values Individually to "tempAmount" column. 
-* copy all entries in "tempAmount" column to new "Amount" column with "paste special without formula" option.
-* Ensure that all unnecessary temporary columns are removed retaining only three i.e.Value Date, Transaction Remarks and Amount
-* Rename the column headings so that now the csv has the following column headings: "Posting Date", "Description", and "Amount"
-* upload the csv/xls file to google sheets to change the date format as per yyyy-mm-dd. Then download it as csv.
-* For the import script to work, the downloaded csv file must be named as icicixxxx.csv, where xxxx must match the entry in config.py file. 
+* remove logo and top few rows until the header row
+* Change the date format as per yyyy-mm-dd. Then save it as csv in the and the file must be named as icicixxxx.csv,  where xxxx must match the entry in config.py file. 
 * For eg. icici3722.csv is a valid name, for the config.py given here. This csv file must be placed in Downloads folder.
 * The script icici.py needs to be placed in the folder importers\icici.
-
-The original headers in the file downloaded from ICICBank has the following columns.
-S No.	Value Date	Transaction Date	Cheque Number	Transaction Remarks	Withdrawal Amount (INR )	Deposit Amount (INR )	Balance (INR )
-
-After following the above preperation steps, we are left with the following three columns only
-Posting Date	Description	Amount
 
 How to Extract data or import data from csv files 
 
@@ -91,15 +75,10 @@ The output of above command is given below
   Expenses:Financial:Taxes:Zerodha   2.82 INR             
   Assets:IN:Investment:Zerodha:Cash          
 
-This is how the original statement from ICICIBank looks like:
+This is how the original statement from ICICIBank renamed as icici3722.csv looks like:
 S No.	Value Date	Transaction Date	Cheque Number	Transaction Remarks	Withdrawal Amount (INR)	Deposit Amount (INR)	Balance (INR)
 1	01/04/2019	02/04/2019	 	MPS/SRI AUROBIN/201904011758/012476/	249.22	 XX,620.60
 2	04/04/2019	04/04/2019	 	MCD REF SRI AUROBINDO UDYO DT 190401	 	1.87	XX,622.47
-
-Sample two line input for icici3722.csv follows:
-Posting Date	Description	Amount
-2019-04-01	MPS/SRI AUROBIN/201904011758/012476/	-249.22
-2019-04-04	MCD REF SRI AUROBINDO UDYO DT 190401	1.87
 
 The output of above command is given below
 
