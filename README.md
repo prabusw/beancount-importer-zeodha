@@ -76,9 +76,9 @@ $bean-extract config.py Downloads > mytxn.txt
 
 <pre>
 Sample two line input for zerodha.csv follows:
-trade_date	tradingsymbol	exchange	segment	trade_type	quantity	price	order_id	trade_id	order_execution_time	amount	fees
-2017-04-13	LIQUIDBEES	NSE	EQ	sell	30	999.99	1200000000772831	59283787	2017-04-13T09:54:26	29999.7	30
-2017-04-13	INFY	NSE	EQ	buy	3	941.2	1100000000419606	26200755	2017-04-13T12:37:32	2823.6	2.82
+trade_date	tradingsymbol	exchange	segment	trade_type	quantity	price	    order_id	      trade_id	order_execution_time	amount	  fees
+2017-04-13	LIQUIDBEES	    NSE	        EQ	  sell	      30	    999.99	1200000000772831	59283787	2017-04-13T09:54:26	  29999.7	  30
+2017-04-13	INFY	          NSE	        EQ	  buy	        3	      941.2	  1100000000419606	26200755	2017-04-13T12:37:32	  2823.6	  2.82
 </pre>
 
 The output of above command is given below
@@ -98,9 +98,9 @@ The output of above command is given below
 
 This is how the original statement from ICICIBank renamed as icici3722.csv looks like:
 <pre>
-S No.	Value Date	Transaction Date	Cheque Number	Transaction Remarks	Withdrawal Amount (INR)	Deposit Amount (INR)	Balance (INR)
-1	01/04/2019	02/04/2019	 	MPS/SRI AUROBIN/201904011758/012476/	249.22	 XX,620.60
-2	04/04/2019	04/04/2019	 	MCD REF SRI AUROBINDO UDYO DT 190401	 	1.87	XX,622.47
+S No.	Value Date	Transaction Date	Cheque Number	Transaction Remarks	                  Withdrawal Amount (INR)	Deposit Amount (INR)	Balance (INR)
+1	    01/04/2019	  02/04/2019	                	MPS/SRI AUROBIN/201904011758/012476/	249.22	                                        XX,620.60
+2	    04/04/2019	  04/04/2019	 	                MCD REF SRI AUROBINDO UDYO DT 190401	 	                         1.87	                XX,622.47
 </pre>
 
 The output of above command is given below
