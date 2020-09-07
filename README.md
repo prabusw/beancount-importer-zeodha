@@ -1,6 +1,7 @@
 # beancount-importers-india
 
-Beancount importer for Banks in India. The code for SBI and ICICI has already been tested and found working for the following banks in India KVB and IOB. More information about Beancount accounting package can be found here http://furius.ca/beancount/
+Beancount importer for Banks and Brokers in India. The code for SBI and ICICI has already been tested and found working for banks like KVB and IOB. 
+More information about Beancount accounting package can be found here http://furius.ca/beancount/
 
 Importer for ICICIBank
 
@@ -46,7 +47,7 @@ For the importer to work, you need to manually add the following fields amount, 
 
 The formula for amount = quantity*price and for fees = amount*0.001 rounded to 2 decimal places. 
 
-In openoffice,
+In Libreoffice,
 formula for amount(column k) appears as =F2*G2, where columns F and G are quantity and price respectively.
 forumla for fees(column L) appears as=round(k2*0.001,2).
 
@@ -60,10 +61,11 @@ Refer to the folder structure presented at the bottom of this document with the 
 
 The configuration file is named as config.py and this can be in the same folder as the main beancount file i,e here my.beancount.
 
-Note: There is another importer for Zerodha here at https://github.com/swapi/beancount-utils. It can import xml formatted Digital Contract Note available 
+Note1: There is another importer for Zerodha here at https://github.com/swapi/beancount-utils. It can import xml formatted Digital Contract Note available 
 from Zerodha website.
 
-
+Note2:In Libreoffice, when changing the date format to YYYY-MM-DD, an apostrophe will appear before the date and the date may still appear as DD-MM-YYYY. 
+To solve this, Choose the Date column. Click on Data->Text to Columns option. Now dates will appear without apostrophes and will appear properly in YYYY-MM-DD format.
 
 How to Extract data or import data from csv files 
 
