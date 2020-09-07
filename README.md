@@ -45,11 +45,11 @@ trade_date	tradingsymbol	exchange	segment	trade_type	quantity	price	order_id	tra
 
 For the importer to work, you need to manually add the following fields amount, fees either in Google sheets or Openoffice or other such spreadsheet software.
 
-The formula for amount = quantity*price and for fees = amount*0.001 rounded to 2 decimal places. 
+The formula for  amount = <pre> quantity\*price </pre> and for fees = <pre> amount\*0.001 </pre> rounded to 2 decimal places. 
 
 In Libreoffice,
-formula for amount(column k) appears as =F2*G2, where columns F and G are quantity and price respectively.
-forumla for fees(column L) appears as=round(k2*0.001,2).
+formula for amount(column k) appears as <pre> =F2\*G2 </pre> , where columns F and G are quantity and price respectively.
+forumla for fees(column L) appears as<pre> =round(k2\*0.001,2)</pre> .
 
 With the above two changes done, make sure the csv file is named as zerodhayyyymmdd.csv format. For example, zerodha20200401.csv is a valid filename. 
 
@@ -87,13 +87,13 @@ trade_date	tradingsymbol	exchange	segment	trade_type	quantity	price	    order_id
 The output of above command is given below
 <pre>
                                
-2017-04-13 * "sell LIQUIDBEES with TradeRef 59283787" ^1200000000772831
+2017-04-13 * "sell LIQUIDBEES with TradeRef 59283787" 
   Assets:IN:Investment:Zerodha:LIQUIDBEES      -30 LIQUIDBEES {} @ 999.99 INR
   Expenses:Financial:Taxes:Zerodha              30 INR                       
   Assets:IN:Investment:Zerodha:Cash        29969.7 INR                       
   Income:IN:Investment:PnL:LIQUIDBEES                                        
 
-2017-04-13 * "buy INFY with TradeRef 26200755" ^1100000000419606
+2017-04-13 * "buy INFY with TradeRef 26200755" 
   Assets:IN:Investment:Zerodha:INFY     3 INFY {941.2 INR}
   Expenses:Financial:Taxes:Zerodha   2.82 INR             
   Assets:IN:Investment:Zerodha:Cash          
