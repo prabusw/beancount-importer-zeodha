@@ -2,7 +2,6 @@
 This script is heavily based on the script importers-chase.py  by Matt Terwilliger. 
 Original script can be found here https://gist.github.com/mterwill/7fdcc573dc1aa158648aacd4e33786e8
 In V0.2 made changes to automatically recognize credit and Debit transactions by changing sign based on importers-schwab.py script
-To be tested as on 2020-08-19 22:00 Hrs
 """
 __copyright__ = "Copyright (C) 2020  Prabu Anand K"
 __license__ = "GNU GPLv3"
